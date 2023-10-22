@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 1.5rem;
+            
+
+        }
+        nav{
+            
+            position: sticky;
+            top: 0;
+        }
+       
+        ul{
+            list-style-type: none;
+            margin: 0;
+            background-color: #003262;
+            text-align: right;
+            
+        }
+        li{
+            display: inline-block;
+            margin-inline: 1rem;
+        }
+        li:nth-child(1){
+            color: white;
+            margin-right: 30rem;
+        }
+        li a{
+            text-decoration: none;
+            color:white;
+        }
+        li a:hover{
+            
+            color: white;
+            background:#007fff ;
+        }
+        figcaption{
+            font-size: 0.8rem;
+            color: whitesmoke;
+            background-color: #003262;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            
+        }
+        .img1{
+            float: left;
+            padding: 0.5rem;
+            background-color: white;
+            border: 1px solid #003262;
+            margin: 0.5rem;
+            margin-right: 2rem;
+            
+            
+        }
+        .img2{
+            float: right;
+            padding: 0.5rem;
+            background-color: white;
+            border: 1px solid #003262;
+            margin: 0.5rem;
+            margin-left: 2rem;
+            
+            
+        }
+        .clear{
+            clear: both;
+        }
+        section{
+            background-color: white;
+            border: 1px solid #003262;
+            padding: 0.5rem;
+            display: flow-root;
+            margin-left: 5rem;
+            margin-right: 5rem;
+
+            
+        }
+        section:hover{
+            box-shadow: 5px 5px 18px #003262;
+
+
+        }
+         p{
+                margin-top: 2rem;
+                margin: 0.5rem;
+                padding: 1rem;
+                
+            }
+        .column{
+            columns:4 250px;
+            column-rule: 3px solid #003262;
+            column-gap: 3rem;
+            
+        }
+        .column p{
+            margin-top: 0;
+            margin-bottom: 0;
+            
+        }
+        .column h2{
+            background: #003262;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            margin: 0.5rem;
+            margin-bottom: 0rem;
+            break-inside: avoid;
+        }
+        .column .quote{
+            color:#007fff;
+            text-align: center;
+            font-size: 2rem;
+            column-span:all;
+            margin-top: 2rem;
+
+        }
+        .nowrap{
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <nav>    
+        
+            <ul>
+                <li>css Float concept</li>
+                <li><a href="">External</a></li>
+                <li><a href="">Internal</a></li>
+                <li><a href="">Inline</a></li>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JavaScript</a></li>
+            </ul> 
+   </nav>
+<figure>
+    <img src="RMS_Titanic_3.jpg" alt="Rms titanic"  height="400" width="1350" loading="lazy">
+    <figcaption>
+        RMS Titanic was a British passenger liner, operated by the White Star Line, that sank in 
+        the North Atlantic Ocean on 15 April 1912 after striking an iceberg during her maiden 
+        voyage from Southampton, England to New York City, United States.
+    </figcaption>
+    
+    <main>
+        <div>
+            <section>
+                <img class="img1" src="637px-RMS_Titanic_2.jpg" alt="Rms titanic 2" height="300" width="500" loading="lazy">
+                <p>
+                    RMS Titanic was a British passenger liner, operated by the White Star Line, that 
+                    sank in the North Atlantic Ocean on 15 April 1912 after striking an iceberg during 
+                    her maiden voyage from Southampton, England to New York City, United States. 
+                    Of the estimated 2,224 passengers and crew aboard, more than 1,500 died, making it 
+                    the deadliest sinking of a single ship up to that time.It remains the deadliest 
+                    peacetime sinking of an ocean liner or cruise ship.The disaster drew public 
+                    attention, provided foundational material for the disaster film genre, and has 
+                    inspired many artistic works.
+                </p>
+            </section>
+            <p>
+                The first-class accommodation was designed to be the pinnacle of comfort and luxury,
+                 with a gymnasium, swimming pool, smoking rooms, high-class restaurants and cafes, 
+                 a Turkish bath and hundreds of opulent cabins.
+            </p>
+            <div class="clear"></div>
+            <section>
+                <img class="img2" src="640px-Titanic_in_Southampton.jpg" alt="Rms titanic 3" height="300" width="500" loading="lazy">
+                <p>
+                    RMS Titanic was the largest ship afloat at the time she entered service and the second of 
+                    three Olympic-class ocean liners operated by the White Star Line. She was built by the Harland 
+                    and Wolff shipyard in Belfast. Thomas Andrews, the chief naval architect of the shipyard, 
+                    died in the disaster. Titanic was under the command of Captain Edward Smith, who went down 
+                    with the ship. The ocean liner carried some of the wealthiest people in the world, as well 
+                    as hundreds of emigrants from the British Isles, Scandinavia, and elsewhere throughout Europe.
+                </p>
+            </section>
+            <p>
+                A high-powered radiotelegraph transmitter was available for sending passenger "marconigrams" 
+                and for the ship's operational use. Titanic had advanced safety features, such as watertight 
+                compartments and remotely activated watertight doors, contributing to its reputation as 
+                "unsinkable".
+            </p>
+        </div>
+        
+            <div class="column">
+                <!-- <h2>Column One</h2> -->
+                <P>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.</P>
+                <!-- <h2>Column Two</h2> -->
+                <p class="quote">&#8220;It substantiates or supports an essay's&#8221;
+                    <span class="nowrap">- thesis statement.</span></p>
+                <P>This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.</P>
+                <!-- <h2>Column Three</h2> -->
+                <P>Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events.</P>
+                <!-- <h2>Column Four</h2> -->
+                <P>Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.</P>
+                
+            </div>
+        
+        <p><strong>Introduction:</strong> the first section of a paragraph; should include the topic sentence and any other sentences at the beginning of the paragraph that give background information or provide a transition.</p>
+    </main>
+</figure>
+</body>
+</html> 

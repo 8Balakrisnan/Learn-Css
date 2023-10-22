@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /* reset*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1.5rem;
+    font-family: 'nunito', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+h1{
+    font-size: 1rem;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+img:hover{
+    transform: scale(150%, 150%);
+
+}
+div{
+    width: 200px;
+    height: 200px;
+    display: grid;
+    
+    border: 2px solid black;
+    place-content: center;
+    color: white;
+}
+div:first-child{
+    background-color: #ab274f;
+    /* transform: translateX(50%); */
+    /* transform: rotateX(180deg); */
+    /* transform: rotatez(20deg); */
+    /* transform: scaleX(150%); */
+    /* transform: skewX(-30deg); */
+
+}
+
+div:nth-child(2){
+    background-color: #7c0902;
+    /* transform: translateY(-3rem); */
+    /* transform: rotateY(180deg); */
+    /* transform: rotateZ(-10deg); */
+    /* transform: scaleY(120%); */
+    /* transform: scale(150%, 120%); */
+    /* transform: skewY(30deg); */
+
+}
+
+div:last-child{
+    background-color: #fe6f5e;
+    /* transform: translate(5rem, -6rem); */
+    /* transform: rotateY(180deg); */
+    /* transform: rotateZ(-10deg); */
+    /* transform: skew(-10deg, 10deg); */
+
+}
+div:hover{
+    background-color: #ab274f73;
+   /*  transition-property: background-color, transform;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: linear; */
+    transition: all linear 1s 0.5s;
+
+    
+}
+div:first-child:hover{
+    transform: scale(150%, 150%);
+}
+
+.animate{
+    /* animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: backwards; */
+    animation: slide 5s ease-in-out 1s 1 normal backwards;
+
+
+}
+
+@keyframes slide{
+    0%{
+        transform:translateX(0);
+    }
+
+    33%{
+        transform: translateX(200px)
+        rotate(180deg) ;
+    }
+    66%{
+        transform: translateX(-200px)
+        rotate(-180deg) ;
+    }
+    
+    100%{
+        transform: translateX(0);
+        background-color: #50c878;
+    }
+}
+    </style>
+</head>
+<body>
+    <img src="Kim_Jong-un.jpg" alt="Kim_Jong-un" width="100" height="100">
+    <h1>Kim Jong Un</h1>
+
+    <main>
+        <div class="square ">Kim</div>
+        <div class="square animate">Jong</div>
+        <div class="square ">Un</div>
+    </main>
+</body>
+</html>

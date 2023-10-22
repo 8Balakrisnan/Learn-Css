@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Style</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* begin Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+
+/* End Reset */
+
+
+/* Begin Utility classes */
+
+.nowrap {
+    white-space: nowrap;
+}
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+
+/* End Utility classes */
+
+body{
+    height: 200vh;
+    background-color: aliceblue;
+    background-image: url(pngegg.png),linear-gradient(to bottom, black,white);
+    background-repeat: repeat-y, no-repeat;
+    background-position: right;
+    background-size: 20%, auto;
+}
+
+.container{
+    position: sticky;
+    top: 0;
+    background-color: #003262;
+    background-image: url(mi7.jpg);
+    /* background-image: url('pattern-png-30769.png'); */
+        
+    /* background-repeat: repeat; */
+   /*  background-size: cover; */
+    background-position: top;
+    
+    
+
+}
+
+.example{
+    border-bottom: 2px solid red;
+    padding: 1rem;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:1rem;
+    
+}
+.h1{
+    
+    font-size: 300%;
+    color:#b2beb5;
+    text-shadow: 3px 3px 6px black;
+    background-color: rgba(255, 255, 255, 0.123);
+    padding: 10px;
+    border-radius: 1rem;
+    
+    
+}
+.profile{
+    width: 10%;
+       
+}
+.profile img{
+    width:100%;
+    height: auto;
+    min-width: 100px;
+    min-height: 100px;
+    border: 5px solid #89cff0;
+    border-radius:50%;
+}
+.clip{
+    
+    font-weight: 1000;
+    font-size: 8rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #003262;
+    background-image: url(mi7.jpg);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-position: top;
+    
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <section class="example">
+                <figure class="profile">
+                <img src="tom-cruise-net-worth.jpg" alt="tom cruise" width="1200" height="1200" loading="lazy">
+                <figcaption class="offscreen">Tom Cruise</figcaption>         
+                </figure>    
+            
+            <h1 class="h1">
+                <span class="nowrap">Tom Cruise</span>
+                <span class="nowrap">American Actor</span>
+            </h1>
+        </section>
+    </div>
+    <p class="clip">Mission Impossible 7</p>
+</body>
+</html>

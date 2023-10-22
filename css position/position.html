@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+.outer-container{
+    border: 3px dashed black;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+
+}
+.inner-container{
+    border: 2px solid blue;
+    width: 40vw;
+    height: 100vh;
+    margin: 100px auto;
+    
+
+}
+.Box{
+    width: 100px;
+    height: 100px;
+    color:white;
+
+}
+.absolute{
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.relative{
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+.fixed{
+    background-color: green;
+    position: fixed;
+    top: 100px;
+}
+.sticky{
+    background-color: black;
+    position: sticky;
+    top: 200px;
+    
+}    
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="Box absolute">
+                <p>Absolute</p>
+            </div>
+             <div class="Box relative">
+                <p>Relative</p>
+            </div>
+            <div class="Box fixed">
+                <p>Fixed</p>
+             </div>
+            <div class="Box sticky">
+                <p>Sticky</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

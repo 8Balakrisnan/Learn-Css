@@ -1,0 +1,254 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header{
+    width: 100%;
+}
+h1{
+    border: 2px  #112A46;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5em;
+    background-color: lightgreen;
+}
+
+
+body {
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ACC8E5;
+    width: 50%;
+    min-height: 100vh;
+    border: 2px solid black;
+    box-sizing:border-box
+    
+}
+
+h1, h2 {
+    color: #112A46;
+}
+main{
+    background-color: lightgray;
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+p {
+    color: #112A46;
+    font-size: 1em;
+    width: 65ch;
+}
+
+.gray {
+    color: #112A46;
+    
+}
+} */ 
+
+/* h1{
+    border: 2px groove;
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    margin: 0.5em;
+    
+} */
+h1:hover{
+    color:blue;
+}
+h2{
+    color:blue;
+    background-color:#fbec5d;
+    border-radius: 1.2rem 1.2rem 0 0;
+    display: ;
+}
+.hightlight {
+    background-color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+    letter-spacing: 0.5em;
+}
+  
+
+.container1 {
+    border: 0px solid black;
+    border-radius: 2rem 2rem 0 0;
+    border-top-width: px;
+    border-top-color:;
+    border-right: px;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    margin:0.5em;
+    outline: 0px solid blue;
+    outline-offset: 0px;
+    width: 98%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #ffd800;
+}
+.container2 {
+    border: 0px solid black;
+    background-color: #fbec5d;
+    border-radius: 1rem 1rem 0 0;
+    border-top-width: px;
+    border-top-color:;
+    border-right: px;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    margin:0.5em;
+    outline: 0px solid blue;
+    outline-offset: 0px;
+    width: 50%;
+    
+}
+
+div {
+    position: relative;
+}
+
+.container3{
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0.5em;
+    position: absolute; 
+    top: 5.5em;
+    right:4em; 
+    line-height: 02;
+    box-sizing: content-box;
+    font-family: monospace;
+    text-align: center;
+    
+    
+}
+
+ol{
+    list-style-type:none;
+    /* list-style-position: inside; */
+    /* list-style-image: url(icons8-checkmark-16.png); */
+    
+}
+
+ul{
+    list-style-type:none;
+    /* list-style-position: inside;
+    list-style-image: url(icons8-checkmark-16.png); */
+    
+    
+}
+li {
+    border-top: 1px solid black;
+}
+li:hover, li:focus{
+    background-color: black;
+    color: whitesmoke;
+}
+li:last-child{
+    border-radius: 0 0 1rem 1rem;
+}
+/* ul li:nth-child(1){
+    color: #f08080;
+} */
+/* ::marker{
+    color: red;
+
+}
+ul li::marker{
+    color:;
+    content: "";
+
+} */
+
+a {
+    background-color: #f44336;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-inline: 3rem;
+       
+}
+
+
+a:hover, a:active, a:focus {
+    background-color: red;
+    text-decoration:underline;
+  }
+
+
+.circle {
+    border: 10px solid gray;
+    width: 100px;
+    height: 100px;
+    margin: 2em;
+    outline: 5px dashed black;
+    outline-offset: 10px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    display:inline-table;
+}
+p {
+    text-decoration:;
+    text-transform: ;
+    text-align: justify;
+    font-size: 1.5rem;
+    text-indent: 2em;
+    
+    word-spacing: ;
+    font-style: ;
+    font-family: monospace;
+}
+
+.block {
+    background-color:black;
+    font-size: 1.5rem;
+    margin: 0.5em;
+    width: 30vw;
+    height: 30vw;
+    color: whitesmoke;
+    padding: 0.5em;
+
+    
+}
+.section{
+    border: 2px solid black;
+    background-color: #fbec5d;
+    display: flow-root;
+    margin: 1em;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.columcount{
+    column-count: 5;
+    
+    column-rule: 3px solid black; 
+    column-gap: 3rem;
+    
+}
+.columcount p{
+   margin-top: 0;
+}
+.columcount h2{
+    margin: 0;
+    background-color: #ffd800;
+    color: black;
+    padding: 2rem;
+    break-inside: avoid;
+}

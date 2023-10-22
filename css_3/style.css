@@ -1,0 +1,225 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  general classes */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font: 1.5rem "nunito", sans-serif;
+    min-height: 100vh;
+    background-color: #CBEEF3;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+header,footer{
+    position: sticky;
+    background-color: #880D1E;
+    text-align: center;
+    color: white;
+}
+header{
+    top: 0;
+}
+
+
+nav{
+    background-color: white;
+    padding: 0.5rem;
+    border-bottom: 5px solid #880D1E;
+    font-weight: bolder;
+    display: flex;  
+    justify-content: space-evenly;
+}
+
+nav a:any-link{
+    text-decoration: none;
+    color: #880D1E;
+}
+nav :is(a:hover,a:focus){
+    background: #880D1E;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration:underline;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    
+    
+
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+span{
+    white-space: nowrap;
+}
+
+footer{
+    bottom: 0;
+}
+/* utility classes*/
+
+.container{
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: white;
+    border: 2px solid #880D1E;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #880D1E;
+}
+/* .container:target{
+    border: 5px solid green;
+} */
+
+.container figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container img{
+    border: 5px solid #880D1E;
+    border-radius: 50%;
+    
+}
+
+.container figcaption{
+    font-weight: bolder;
+    font-size: 1rem;
+    color: #880D1E;
+    margin: 1rem;
+    text-align: center;
+}
+.container figcaption::before{
+    content: '\2728';
+    
+}
+.container p::before{
+    content: open-quote;
+}
+.container p::after{
+    content: close-quote;
+}
+
+
+/* @media querys */
+
+/* small screen */
+
+@media screen and (min-width: 576px){
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .container{
+        width: min(100%, 400px);
+        
+    }
+    .container figcaption{
+        font-size: 2rem;
+    }
+    .container p {
+        font-size: 2rem;
+      }
+    .container:last-child{
+        order: 0;
+    }       
+    
+}
+
+/*  medium screen */
+
+@media screen and (min-width: 768px){
+    nav{
+        visibility: hidden;
+    }
+    .container{
+        width: min(100%, 300px);
+    }
+    .container figure{
+        flex-flow: column-reverse;
+    }       
+    .container p{
+        margin-top: 1rem;
+    }
+}
+
+/* large screen */
+
+@media screen and (min-width: 992px){
+    .container{
+        width: min(100%, 350px);
+        
+    }
+
+    .container:nth-child(2) {
+        order: 0;
+    }
+
+}
+
+/* xl large screen*/
+
+@media screen and (min-width: 1200px){
+    .container{
+        width: min(33% -1rem, 500px);
+        
+        
+    }
+    
+    .container figcaption{
+        font-size: 2rem;
+    }
+    nav{
+        visibility: visible;
+    }
+   
+}
+
+/* lansape screen*/
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    h2{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: none;
+    }
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+      }
+    
+      .container {
+        /* Remove calc() - min() supports math! */
+        width: min(33% - 0.25rem, 200px);
+      }
+    
+      .container figcaption,
+      .container p {
+        font-size: 1rem;
+      }
+}

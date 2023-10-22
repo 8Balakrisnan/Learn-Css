@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Querys</title>
+    <style>
+                /*beging reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable classes*/
+:root{
+    --HEEDFOOT:#606c38;
+    --NAV:#283618;
+    --BGCOLOR1:#606c38;
+    --BGCOLOR2: #283618;
+
+    /* square*/
+    --SQUARE-BGCOLOR:white;
+    --SQUARE-SIZE:max(150px, 20vw);
+    --BORDERS:2px solid black;
+    --SHADOWS:5px 5px 10px black;
+
+    /* font*/
+    --FS: clamp(1.75rem, 3vh, 2.25rem);
+    --FONTSIZE:clamp(0.5rem, 3vh, 1.25rem);
+    --FONT-XL:3rem;
+    --FONT-FM:"Nunito", sans-serif;
+    
+}
+
+
+
+        /*general style*/
+
+body{
+    font-size: 1.5rem;
+    min-height: 100vh;
+    background-color: #283618;
+    background-image: radial-gradient(var(--BGCOLOR1) ,var(--BGCOLOR2));
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header, nav,  footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+
+}
+header,footer{
+    position: sticky;
+    background-color: var(--HEEDFOOT);
+    color: #dda15e;
+}
+header{
+    top: 0;
+}
+nav{
+    background-color: var(--NAV );
+    padding: 0.5rem;
+    border-bottom: 10px solid #606c38;
+}
+main{
+    flex-grow: 1;
+    
+    
+    display: flex;
+    justify-content: flex-start;
+    
+    flex-flow: column wrap;
+    
+    
+}
+
+main section{
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: var(--FS);
+    font-family: var(--FONT-FM);
+
+}
+main aside{
+    
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: white;
+    font-size: var(--FONTSIZE);
+    font-style: italic;
+    padding: 0.5;
+    font-family: var(--FONT-FM);
+
+}
+.contant{
+    
+    
+}
+.square{
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    
+    place-content: center;
+    font-size: 10rem;
+    box-shadow: var(--SHADOWS);
+
+}
+.square--highlight{
+    --SQUARE-BGCOLOR:blue;
+
+}
+
+footer{
+    bottom: 0;
+}
+a:any-link{
+    color: plum;
+    font-weight: bolder;
+    text-decoration: none;
+
+}
+a:hover{
+    filter: brightness(200%);
+    /* filter: hue-rotate(100degree); */
+    
+}
+.tooltip{
+    border-bottom: 1px dashed white;
+    position: relative;
+}
+.tooltip:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    right: 70px;
+    text-wrap: nowrap;
+}    
+
+
+/* light mode*/
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --HEEDFOOT:white;  
+        --NAV:black ;
+        --BGCOLOR1:white;
+        
+        
+    }
+    
+}
+
+@media screen and (min-width: 576px){
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        
+    }
+    main section {
+    width: calc(70% - 5px);
+    }
+
+    main aside {
+    width: calc(30% - 5px);
+    }
+
+}
+
+
+/* small screen */
+
+/* @media screen and (min-width: 576px){
+    body{
+        background-color: #283618;
+        background-image: radial-gradient(#606c38,#283618);
+    }
+    
+        
+    
+} */
+
+/* medium screen */
+
+/* @media screen and (min-width: 768px){
+    body{
+        background-color: #283618;
+        background-image: radial-gradient(#606c38,#283618);
+    }
+    
+        
+    
+} */
+
+/* large screen */
+
+/* @media screen and (min-width: 992px){
+    body{
+        background-color: #283618;
+        background-image: radial-gradient(#606c38,#283618);
+    }
+    
+        
+    
+} */
+
+/* landscape screen */
+
+/* @media screen and (min-height: 425px) and (min-aspect-ratio:7/4){
+    body{
+        background-color: #283618;
+        background-image: radial-gradient(#606c38,#283618);
+    }
+    
+        
+    
+} */
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+        <nav>
+            <h2>Menu</h2>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>My Heading</h1>
+            <p class="contant">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem aliquid omnis a, inventore voluptas alias, quia ipsam animi dicta temporibus hic eveniet harum necessitatibus quibusdam saepe odio suscipit.
+            </p>
+            <br>
+            <a href="http://www.google.com">Google</a>
+        </section>
+        <aside>
+            <h1>My Heading</h1>
+            <p class="contant">
+                <span class="tooltip" data-tooltip="Hi i'm Bala krishnan">Lorem </span>ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem aliquid omnis a, inventore voluptas alias, quia ipsam animi dicta temporibus hic eveniet harum necessitatibus quibusdam saepe odio suscipit.
+            </p>
+        </aside>
+        <!-- <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square square--highlight">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div> -->
+        
+    </main>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
